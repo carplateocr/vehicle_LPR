@@ -1,6 +1,5 @@
 ultralytics==8.2.59
-opencv-python
-opencv-python-headless
+opencv-contrib-python-headless
 torch==2.1.0
 torchaudio==2.1.0
 torchvision==0.16.0
