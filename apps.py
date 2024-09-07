@@ -8,6 +8,7 @@ import cv2
 import torch
 from ultralytics import YOLO
 from ultralytics.utils.checks import check_requirements
+from ultralytics.utils.downloads import GITHUB_ASSETS_STEMS
 import easyocr
 from datetime import datetime
 import yt_dlp
@@ -130,13 +131,13 @@ def inference():
 
    
     # Hardcoded vehicle detection model path
-    custom_vehicle_model_path = r'C:\Users\Administrator\Documents\Notebook Files\yolov8_streamlit_v2\yolov8n.pt'
+    custom_vehicle_model_path = 'yolov8n.pt'
     with st.spinner("Loading model..."):
         vehicle_model = YOLO(custom_vehicle_model_path)
     st.success("Vehicle detection model loaded successfully!")
     
     # Hardcoded license plate detection model path
-    custom_plate_model_path = r'C:\Users\Administrator\Documents\Notebook Files\yolov8_streamlit_v2\weights\license640.pt'
+    custom_plate_model_path = 'license640.pt'
     with st.spinner("Loading model..."):
         plate_model  = YOLO(custom_plate_model_path)
     st.success("License plate detection odel loaded successfully!")
@@ -269,3 +270,7 @@ def inference():
 
     # Destroy window
     cv2.destroyAllWindows()
+
+# Main function call
+if __name__ == "__main__":
+    inference()
