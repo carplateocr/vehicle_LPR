@@ -6,3 +6,4 @@ torchaudio==2.1.0
 torchvision==0.16.0
 easyocr==1.7.1
 yt-dlp==2024.7.16
+streamlit_webrtc
